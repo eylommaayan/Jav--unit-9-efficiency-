@@ -1,3 +1,6 @@
+
+
+
 public class sortMod {
 
     // Function to sort the array based on modulo k
@@ -11,7 +14,20 @@ public class sortMod {
             for (int j = curr; j < arr.length; j++) {
                 // If the remainder of arr[j] when divided by k is i
                 if (arr[j] % k == i) {
-                    // Swap arr[j] with the current position
+                 /*
+                  * temp = arr[j];
+
+This line stores the value of arr[j] in a temporary variable temp.
+Purpose: To hold the value of arr[j] so it can be moved to the position of arr[curr].
+arr[j] = arr[curr];
+
+This line assigns the value of arr[curr] to arr[j].
+Purpose: To move the value of arr[curr] to the position j in the array.
+arr[curr] = temp;
+
+This line assigns the value stored in temp (which was originally arr[j]) to arr[curr].
+Purpose: To complete the swap by moving the original value of arr[j] to the position curr.
+                  */
                     temp = arr[j];
                     arr[j] = arr[curr];
                     arr[curr] = temp;
